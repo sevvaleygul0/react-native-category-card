@@ -42,6 +42,6 @@ export default {
   descriptionTextStyle: {fontSize: 14, color: '#B4B4B4'},
   countContainerStyle: {marginLeft: 'auto'},
   countTextStyle: {fontSize: 18, color: '#B4B4B4'},
-  rightButtonContainer: {marginLeft: 20, marginRight: 4},
+  rightButtonContainer: {marginLeft: 22, marginRight: 8},
   buttonImageStyle: {width: 16, height: 16},
 };
