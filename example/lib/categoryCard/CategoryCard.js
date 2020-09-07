@@ -34,6 +34,9 @@ export default class CategoryCard extends Component {
       disableDescriptionText,
       descriptionText,
       descriptionTextStyle,
+      count,
+      disableCountContainer,
+      countTextStyle,
     } = this.props;
     return (
       <Androw style={shadowStyle || _shadowStyle(shadowColor)}>
@@ -57,6 +60,13 @@ export default class CategoryCard extends Component {
               </Text>
             ) : null}
           </View>
+          {!disableCountContainer ? (
+            <View style={styles.countContainerStyle}>
+              <Text style={countTextStyle || styles.countTextStyle}>
+                {count}
+              </Text>
+            </View>
+          ) : null}
         </View>
       </Androw>
     );
@@ -72,6 +82,9 @@ CategoryCard.propTypes = {
   titleText: PropTypes.string,
   disableDescriptionText: PropTypes.bool,
   descriptionText: PropTypes.string,
+  count: PropTypes.number,
+  disableCountContainer: PropTypes.bool,
+  count: PropTypes.number,
 };
 
 CategoryCard.defaultProps = {
@@ -84,4 +97,6 @@ CategoryCard.defaultProps = {
   titleText: 'Fruit & Vegetables',
   disableDescriptionText: false,
   descriptionText: 'Fresh Food',
+  disableCountContainer: false,
+  count: 10,
 };

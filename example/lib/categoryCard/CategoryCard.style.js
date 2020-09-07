@@ -40,4 +40,6 @@ export default {
   textContainer: {justifyContent: 'center'},
   titleTextStyle: {fontSize: 16, fontWeight: 'bold'},
   descriptionTextStyle: {fontSize: 14, color: '#B4B4B4'},
+  countContainerStyle: {marginLeft: 'auto'},
+  countTextStyle: {fontSize: 16, color: '#B4B4B4'},
 };
