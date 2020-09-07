@@ -17,9 +17,8 @@ const App = () => {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        imageContainerBackgroundColor: '#dede44',
       }}>
-      <CategoryCard />
+      <CategoryCard onPress={() => console.log('Bananas')} />
     </View>
   );
 };

@@ -37,9 +37,11 @@ export default {
     alignItems: 'center',
   },
   imageStyle: {width: 30, height: 30},
-  textContainer: {justifyContent: 'center'},
+  textContainer: {justifyContent: 'space-around', height: 50},
   titleTextStyle: {fontSize: 16, fontWeight: 'bold'},
   descriptionTextStyle: {fontSize: 14, color: '#B4B4B4'},
   countContainerStyle: {marginLeft: 'auto'},
-  countTextStyle: {fontSize: 16, color: '#B4B4B4'},
+  countTextStyle: {fontSize: 18, color: '#B4B4B4'},
+  rightButtonContainer: {marginLeft: 20, marginRight: 4},
+  buttonImageStyle: {width: 16, height: 16},
 };

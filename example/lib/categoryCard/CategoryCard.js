@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Androw from 'react-native-androw';
 import {
   Screen,
@@ -37,13 +37,16 @@ export default class CategoryCard extends Component {
       count,
       disableCountContainer,
       countTextStyle,
+      onPress,
+      rightButtonImageSource,
+      buttonImageStyle,
     } = this.props;
     return (
       <Androw style={shadowStyle || _shadowStyle(shadowColor)}>
         <View style={_container(height, width, backgroundColor)}>
           <LinearGradient
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}}
+            start={{x: 0.0, y: 0.25}}
+            end={{x: 0.5, y: 1.0}}
             colors={LinearGradientColors}
             style={styles.gradient}>
             <Image
@@ -67,6 +70,13 @@ export default class CategoryCard extends Component {
               </Text>
             </View>
           ) : null}
+          <View style={styles.rightButtonContainer}>
+            <TouchableOpacity onPress={onPress}>
+              <Image
+                source={rightButtonImageSource}
+                style={buttonImageStyle || styles.buttonImageStyle}></Image>
+            </TouchableOpacity>
+          </View>
         </View>
       </Androw>
     );
@@ -99,4 +109,5 @@ CategoryCard.defaultProps = {
   descriptionText: 'Fresh Food',
   disableCountContainer: false,
   count: 10,
+  rightButtonImageSource: require('../assets/next.png'),
 };
