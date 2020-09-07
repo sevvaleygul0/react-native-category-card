@@ -1,11 +1,8 @@
 <img alt="React Native Library Boilerplate" src="assets/logo.png" width="1050"/>
 
-
 [![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/WrathChaos/react-native-library-boilerplate)
 
-
 [![React Native Library Boilerplate](https://img.shields.io/badge/-React%20Native%20Library%20Boilerplate-lightgrey?style=for-the-badge)](https://github.com/WrathChaos/react-native-library-boilerplate)
-
 
 [![npm version](https://img.shields.io/npm/v/react-native-library-boilerplate.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-library-boilerplate)
 [![npm](https://img.shields.io/npm/dt/react-native-library-boilerplate.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-library-boilerplate)
@@ -23,7 +20,7 @@
 Add the dependency:
 
 ```ruby
-npm i react-native-library-boilerplate
+npm i react-native-category-card
 ```
 
 ## Peer Dependencies
@@ -33,6 +30,9 @@ npm i react-native-library-boilerplate
 ```js
 "react": ">= 16.x.x",
 "react-native": ">= 0.55.x",
+"react-native-androw": ">= 0.0.34",
+"react-native-linear-gradient": ">= 2.5.6",
+"@freakycoder/react-native-helpers": ">= 0.1.3",
 ```
 
 # Usage
@@ -40,7 +40,7 @@ npm i react-native-library-boilerplate
 ## Import
 
 ```js
-import { Component1, Component2 } from "react-native-library-boilerplate";
+import CategoryCard from "react-native-category-card";
 ```
 
 ## Component1 Usage
