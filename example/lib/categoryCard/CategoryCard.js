@@ -11,11 +11,7 @@ import {
 } from '@freakycoder/react-native-helpers';
 import LinearGradient from 'react-native-linear-gradient';
 
-import styles, {
-  _shadowStyle,
-  _container,
-  _imageContainer,
-} from './CategoryCard.style';
+import styles, {_shadowStyle, _container} from './CategoryCard.style';
 
 export default class CategoryCard extends Component {
   constructor(props) {
@@ -33,6 +29,11 @@ export default class CategoryCard extends Component {
       LinearGradientColors,
       imageStyle,
       imageSource,
+      titleTextStyle,
+      titleText,
+      disableDescriptionText,
+      descriptionText,
+      descriptionTextStyle,
     } = this.props;
     return (
       <Androw style={shadowStyle || _shadowStyle(shadowColor)}>
@@ -46,6 +47,16 @@ export default class CategoryCard extends Component {
               style={imageStyle || styles.imageStyle}
               source={imageSource}></Image>
           </LinearGradient>
+          <View style={styles.textContainer}>
+            <Text style={titleTextStyle || styles.titleTextStyle}>
+              {titleText}
+            </Text>
+            {!disableDescriptionText ? (
+              <Text style={descriptionTextStyle || styles.descriptionTextStyle}>
+                {descriptionText}
+              </Text>
+            ) : null}
+          </View>
         </View>
       </Androw>
     );
@@ -58,6 +69,9 @@ CategoryCard.propTypes = {
   width: PropTypes.number,
   backgroundColor: PropTypes.string,
   LinearGradientColors: PropTypes.array,
+  titleText: PropTypes.string,
+  disableDescriptionText: PropTypes.bool,
+  descriptionText: PropTypes.string,
 };
 
 CategoryCard.defaultProps = {
@@ -67,4 +81,7 @@ CategoryCard.defaultProps = {
   backgroundColor: '#fff',
   LinearGradientColors: ['#9CF4DF', '#30C9E8', '#107C91'],
   imageSource: require('../assets/bananas.png'),
+  titleText: 'Fruit & Vegetables',
+  disableDescriptionText: false,
+  descriptionText: 'Fresh Food',
 };

@@ -21,21 +21,15 @@ export const _container = (height, width, backgroundColor) => ({
   width,
   backgroundColor,
   borderRadius: 28,
-  justifyContent: 'center',
-});
-
-export const _imageContainer = (backgroundColor) => ({
-  backgroundColor,
-  borderRadius: 28,
-  marginLeft: 16,
-  height: 55,
-  width: 55,
+  flexDirection: 'row',
+  alignItems: 'center',
 });
 
 export default {
   gradient: {
     borderRadius: 28,
     marginLeft: 16,
+    marginRight: 20,
     height: 55,
     width: 55,
     opacity: 0.4,
@@ -43,4 +37,7 @@ export default {
     alignItems: 'center',
   },
   imageStyle: {width: 30, height: 30},
+  textContainer: {justifyContent: 'center'},
+  titleTextStyle: {fontSize: 16, fontWeight: 'bold'},
+  descriptionTextStyle: {fontSize: 14, color: '#B4B4B4'},
 };
