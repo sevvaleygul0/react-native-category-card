@@ -1,7 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-
-import CategoryCard from './lib/categoryCard/CategoryCard';
+import CategoryCard from 'react-native-category-card';
 
 const App = () => {
   return (

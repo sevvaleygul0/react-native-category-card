@@ -1,5 +1,7 @@
 <img alt="React Native Category Card" src="assets/logo.png" width="1050"/>
 
+# Demo
+
 <p align="center">
   <img alt="React Native Category Cards"
     src="assets/Screenshots/screen-1.png" width="686px"/>
