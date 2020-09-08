@@ -1,11 +1,3 @@
-import {
-  Screen,
-  ScreenWidth,
-  ScreenHeight,
-  isIOS,
-  isAndroid,
-} from '@freakycoder/react-native-helpers';
-
 export const _shadowStyle = (shadowColor) => ({
   shadowColor,
   shadowRadius: 10,
@@ -32,7 +24,7 @@ export default {
     marginRight: 20,
     height: 55,
     width: 55,
-    opacity: 0.4,
+    opacity: 0.5,
     justifyContent: 'center',
     alignItems: 'center',
   },

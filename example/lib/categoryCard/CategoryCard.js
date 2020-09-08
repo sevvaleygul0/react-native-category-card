@@ -2,13 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Androw from 'react-native-androw';
-import {
-  Screen,
-  ScreenWidth,
-  ScreenHeight,
-  isIOS,
-  isAndroid,
-} from '@freakycoder/react-native-helpers';
+import {ScreenWidth} from '@freakycoder/react-native-helpers';
 import LinearGradient from 'react-native-linear-gradient';
 
 import styles, {_shadowStyle, _container} from './CategoryCard.style';
