@@ -1,4 +1,4 @@
-<img alt="React Native Category Card" src="assets/logo.png" width="1050"/>
+<img alt="React Native Category Card" src="assets/logo.png" width="686"/>
 
 # Demo
 
