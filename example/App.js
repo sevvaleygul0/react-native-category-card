@@ -18,8 +18,8 @@ const App = () => {
           titleText="Bakery"
           disableDescriptionText={true}
           count={3}
-          LinearGradientColors={['#F4A09C', '#EE8F66', '#E83A30']}
-          imageSource={require('./lib/asset/bread.png')}
+          gradientColors={['#F4A09C', '#EE8F66', '#E83A30']}
+          imageSource={require('./lib/asset/bananas.png')}
           onPress={() => console.log('Bakery')}
         />
       </View>
@@ -28,8 +28,8 @@ const App = () => {
           titleText={'Meat & Poultry'}
           descriptionText={'Butcher'}
           count={1}
-          LinearGradientColors={['#FAF9D1', '#EECA66', '#E8B730']}
-          imageSource={require('./lib/asset/meat.png')}
+          gradientColors={['#FAF9D1', '#EECA66', '#E8B730']}
+          imageSource={require('./lib/asset/bananas.png')}
           onPress={() => console.log('Meat & Poultry')}
         />
       </View>
@@ -38,8 +38,8 @@ const App = () => {
           titleText={'Dairy & Eggs'}
           count={4}
           disableDescriptionText={true}
-          LinearGradientColors={['#D1F3FA', '#9CE5F4', '#16A9C7']}
-          imageSource={require('./lib/asset/dairy.png')}
+          gradientColors={['#D1F3FA', '#9CE5F4', '#16A9C7']}
+          imageSource={require('./lib/asset/bananas.png')}
           onPress={() => console.log('Dairy & Eggs')}
         />
       </View>
@@ -48,8 +48,8 @@ const App = () => {
           titleText={'Pantry'}
           count={8}
           disableDescriptionText={true}
-          LinearGradientColors={['#E5D1FA', '#C69CF4', '#A866EE']}
-          imageSource={require('./lib/asset/supermarket.png')}
+          gradientColors={['#E5D1FA', '#C69CF4', '#A866EE']}
+          imageSource={require('./lib/asset/bananas.png')}
           onPress={() => console.log('Pantry')}
         />
       </View>
@@ -57,8 +57,8 @@ const App = () => {
         titleText={'Detergent'}
         count={2}
         disableDescriptionText={true}
-        LinearGradientColors={['#D1FAD7', '#9CF4A7', '#66EE78']}
-        imageSource={require('./lib/asset/clean.png')}
+        gradientColors={['#D1FAD7', '#9CF4A7', '#66EE78']}
+        imageSource={require('./lib/asset/bananas.png')}
         onPress={() => console.log('Detergent')}
       />
     </View>
