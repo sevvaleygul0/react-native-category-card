@@ -1,6 +1,6 @@
 {
   "name": "react-native-category-card",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "",
   "keywords": [
     "SevvalEygul",
@@ -49,5 +49,7 @@
     "react-native-linear-gradient": "^2.5.6",
     "@freakycoder/react-native-custom-text": "0.0.12"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-native-material-ripple": "^0.9.1"
+  }
 }
