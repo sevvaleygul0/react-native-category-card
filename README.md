@@ -27,7 +27,8 @@ npm i react-native-category-card
 "react-native-androw": ">= 0.0.34",
 "react-native-linear-gradient": ">= 2.5.6",
 "@freakycoder/react-native-helpers": ">= 0.1.3",
-"@freakycoder/react-native-custom-text": ">= 0.0.12"
+"@freakycoder/react-native-custom-text": ">= 0.0.12",
+"react-native-material-ripple": ">= 0.9.1"
 ```
 
 # Usage
