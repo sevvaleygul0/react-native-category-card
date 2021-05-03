@@ -3,21 +3,16 @@
 # Demo
 
 <table>
-<tr>
-<td align="center">
-  <img alt="React Native Category Cards"
-    src="assets/Screenshots/screen-1.png" width="486px"/>
-</td>
-</tr>
-<tr>
-<td align="center">
-  <img alt="React Native Category Card"
-    src="assets/Screenshots/screen-2.png" width="686px"/>
-</td>
-  </tr>
+
   <tr>
-  <img alt="React Native Category Card Library"
+    <td>
+      <img alt="React Native Category Cards"
+        src="assets/Screenshots/screen-1.png" width="486px"/>
+    </td>
+    <td>
+      <img alt="React Native Category Card Library"
         src="assets/Gifs/category-card.gif" />
+      </td>
   </tr>
 </table>
 
