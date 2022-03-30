@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import CategoryCard from './lib/category-card/CategoryCard';
 
 const App = () => {
@@ -7,10 +7,13 @@ const App = () => {
     <View
       style={{
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
+        marginTop: 70,
       }}>
-      <View style={{marginBottom: 16}}>
+      <Text style={{fontSize: 26, fontWeight: 'bold'}}>
+        React Native Category Card
+      </Text>
+      <View style={{marginTop: 52, marginBottom: 16}}>
         <CategoryCard
           titleColor="#4c8e9c"
           height={45}

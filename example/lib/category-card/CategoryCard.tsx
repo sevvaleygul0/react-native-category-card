@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import {
   View,
+  Text,
   Image,
   ImageStyle,
   StyleProp,
@@ -11,7 +11,6 @@ import {
 import Androw from 'react-native-androw';
 import {ScreenWidth} from '@freakycoder/react-native-helpers';
 import LinearGradient from 'react-native-linear-gradient';
-import Text from '@freakycoder/react-native-custom-text';
 import RNBounceable from '@freakycoder/react-native-bounceable';
 
 import styles, {_shadowStyle, _container} from './CategoryCard.style';
@@ -106,13 +105,14 @@ export default class CategoryCard extends React.Component<IProps, IState> {
     const renderTextContainer = () => (
       <View style={styles.textContainer}>
         {customTitleTextComponent || (
-          <Text h4 bold color={titleColor}>
+          <Text style={{fontWeight: 'bold', fontSize: 15, color: titleColor}}>
             {titleText}
           </Text>
         )}
         {descriptionText
           ? customDescriptionComponent || (
-              <Text h5 bold color={descriptionColor} style={{paddingTop: 4}}>
+              <Text
+                style={{paddingTop: 4, fontSize: 13, color: descriptionColor}}>
                 {descriptionText}
               </Text>
             )
@@ -124,7 +124,9 @@ export default class CategoryCard extends React.Component<IProps, IState> {
       count
         ? customCountTextComponent || (
             <View style={styles.countContainerStyle}>
-              <Text h4 color={'#B4B4B4'}>
+              <Text
+                style={{paddingTop: 4, fontSize: 15, color: descriptionColor}}
+                color={'#B4B4B4'}>
                 {count}
               </Text>
             </View>
@@ -133,12 +135,10 @@ export default class CategoryCard extends React.Component<IProps, IState> {
 
     const renderRightImageContainer = () =>
       !disableRightImage && (
-        <View style={styles.rightButtonContainer}>
-          <Image
-            source={rightButtonImageSource}
-            style={buttonImageStyle || styles.buttonImageStyle}
-          />
-        </View>
+        <Image
+          source={rightButtonImageSource}
+          style={buttonImageStyle || styles.buttonImageStyle}
+        />
       );
 
     return (
