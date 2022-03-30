@@ -5,7 +5,6 @@ interface Style {
   imageStyle: ImageStyle;
   textContainer: ViewStyle;
   countContainerStyle: ViewStyle;
-  rightButtonContainer: ViewStyle;
   buttonImageStyle: ImageStyle;
 }
 
@@ -35,6 +34,7 @@ export const _container = (
   paddingBottom: 12,
   flexDirection: 'row',
   alignItems: 'center',
+  justifyContent: 'center',
 });
 
 export default StyleSheet.create<Style>({
@@ -51,12 +51,12 @@ export default StyleSheet.create<Style>({
     width: 30,
     height: 30,
   },
-  textContainer: {},
+  textContainer: {
+    marginRight: 'auto',
+  },
   countContainerStyle: {
     marginLeft: 'auto',
-  },
-  rightButtonContainer: {
-    marginLeft: 'auto',
+    marginRight: 12,
   },
   buttonImageStyle: {
     width: 16,

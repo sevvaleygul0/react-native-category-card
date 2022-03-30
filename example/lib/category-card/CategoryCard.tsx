@@ -38,7 +38,7 @@ interface IProps {
   descriptionText: string;
   descriptionColor: string;
   backgroundColor: string;
-  disableCount: boolean;
+  disableRightImage: boolean;
   imageSource: ISource;
   rightButtonImageSource: ISource;
   imageStyle: CustomViewStyleProp;
@@ -78,6 +78,7 @@ export default class CategoryCard extends React.Component<IProps, IState> {
       backgroundColor = '#fff',
       buttonImageStyle,
       customImageComponent,
+      disableRightImage = false,
       ImageComponent = Image,
       rightButtonImageSource = require('../asset/next.png'),
       customCountTextComponent,
@@ -130,14 +131,15 @@ export default class CategoryCard extends React.Component<IProps, IState> {
           )
         : null;
 
-    const renderRightImageContainer = () => (
-      <View style={styles.rightButtonContainer}>
-        <Image
-          source={rightButtonImageSource}
-          style={buttonImageStyle || styles.buttonImageStyle}
-        />
-      </View>
-    );
+    const renderRightImageContainer = () =>
+      !disableRightImage && (
+        <View style={styles.rightButtonContainer}>
+          <Image
+            source={rightButtonImageSource}
+            style={buttonImageStyle || styles.buttonImageStyle}
+          />
+        </View>
+      );
 
     return (
       <RNBounceable onPress={onPress}>

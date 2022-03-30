@@ -57,6 +57,7 @@ const App = () => {
       <CategoryCard
         titleText={'Detergent'}
         count={2}
+        disableRightImage={true}
         gradientColors={['#D1FAD7', '#9CF4A7', '#66EE78']}
         imageSource={require('./lib/asset/star.png')}
         onPress={() => console.log('Detergent')}
