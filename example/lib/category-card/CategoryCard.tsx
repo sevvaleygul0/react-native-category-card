@@ -71,7 +71,7 @@ export default class CategoryCard extends React.Component<IProps, IState> {
       height,
       borderRadius = 16,
       titleText,
-      titleColor = '#9e9e9e',
+      titleColor = '#4B4B4B',
       imageStyle,
       shadowColor = '#757575',
       shadowStyle,

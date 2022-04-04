@@ -88,7 +88,7 @@ import CategoryCard from "react-native-category-card";
 | imageSource                |   asset   |              default              | change the image source                                    |
 | customImageComponent       | component |              default              | set your own custom component instead of default Image one |
 | titleText                  |   style   |              default              | change the title text                                      |
-| titleColor                 |  string   |             "#9e9e9e"             | change the title text color                                |
+| titleColor                 |  string   |             "#4B4B4B"             | change the title text color                                |
 | customTitleTextComponent   | component |              default              | set your own custom component instead of default Text one  |
 | descriptionText            |  string   |                                   | change the description text                                |
 | descriptionColor           |  string   |             "#B4B4B4"             | change the description text color                          |
