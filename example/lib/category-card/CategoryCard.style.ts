@@ -1,4 +1,4 @@
-import {ImageStyle, StyleSheet, ViewStyle} from 'react-native';
+import {ImageStyle, StyleSheet, TextStyle, ViewStyle} from 'react-native';
 
 interface Style {
   gradient: ViewStyle;
@@ -16,6 +16,23 @@ export const _shadowStyle = (shadowColor): ViewStyle => ({
     width: 0,
     height: 5,
   },
+});
+
+export const _titleTextStyle = (textColor: string): TextStyle => ({
+  fontWeight: 'bold',
+  fontSize: 15,
+  color: textColor,
+});
+
+export const _countTextStyle = (textColor: string): TextStyle => ({
+  paddingTop: 4,
+  fontSize: 15,
+  color: textColor,
+});
+export const _descriptionTextStyle = (descriptionColor: string): TextStyle => ({
+  paddingTop: 4,
+  fontSize: 13,
+  color: descriptionColor,
 });
 
 export const _container = (

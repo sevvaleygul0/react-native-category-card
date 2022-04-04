@@ -3,19 +3,24 @@ import {
   View,
   Text,
   Image,
-  ImageStyle,
   StyleProp,
   ViewStyle,
-  TextStyle,
+  ImageStyle,
+  Dimensions,
 } from 'react-native';
 import Androw from 'react-native-androw';
-import {ScreenWidth} from '@freakycoder/react-native-helpers';
 import LinearGradient from 'react-native-linear-gradient';
 import RNBounceable from '@freakycoder/react-native-bounceable';
 
-import styles, {_shadowStyle, _container} from './CategoryCard.style';
+import styles, {
+  _shadowStyle,
+  _container,
+  _descriptionTextStyle,
+  _countTextStyle,
+  _titleTextStyle,
+} from './CategoryCard.style';
+const windowWidth = Dimensions.get('window').width;
 
-type CustomTextStyleProp = StyleProp<TextStyle> | Array<StyleProp<TextStyle>>;
 type CustomViewStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
 type CustomImageStyleProp =
   | StyleProp<ImageStyle>
@@ -37,7 +42,6 @@ interface IProps {
   descriptionText: string;
   descriptionColor: string;
   backgroundColor: string;
-  disableRightImage: boolean;
   imageSource: ISource;
   rightButtonImageSource: ISource;
   imageStyle: CustomViewStyleProp;
@@ -62,7 +66,7 @@ export default class CategoryCard extends React.Component<IProps, IState> {
   render() {
     const {
       count,
-      width = ScreenWidth * 0.8,
+      width = windowWidth * 0.8,
       height,
       borderRadius = 16,
       titleText = 'Fruit & Vegetables',
@@ -77,9 +81,8 @@ export default class CategoryCard extends React.Component<IProps, IState> {
       backgroundColor = '#fff',
       buttonImageStyle,
       customImageComponent,
-      disableRightImage = false,
       ImageComponent = Image,
-      rightButtonImageSource = require('../asset/next.png'),
+      rightButtonImageSource,
       customCountTextComponent,
       customTitleTextComponent,
       customDescriptionComponent,
@@ -105,14 +108,11 @@ export default class CategoryCard extends React.Component<IProps, IState> {
     const renderTextContainer = () => (
       <View style={styles.textContainer}>
         {customTitleTextComponent || (
-          <Text style={{fontWeight: 'bold', fontSize: 15, color: titleColor}}>
-            {titleText}
-          </Text>
+          <Text style={_titleTextStyle(titleColor)}>{titleText}</Text>
         )}
         {descriptionText
           ? customDescriptionComponent || (
-              <Text
-                style={{paddingTop: 4, fontSize: 13, color: descriptionColor}}>
+              <Text style={_descriptionTextStyle(descriptionColor)}>
                 {descriptionText}
               </Text>
             )
@@ -124,17 +124,13 @@ export default class CategoryCard extends React.Component<IProps, IState> {
       count
         ? customCountTextComponent || (
             <View style={styles.countContainerStyle}>
-              <Text
-                style={{paddingTop: 4, fontSize: 15, color: descriptionColor}}
-                color={'#B4B4B4'}>
-                {count}
-              </Text>
+              <Text style={_countTextStyle(descriptionColor)}>{count}</Text>
             </View>
           )
         : null;
 
     const renderRightImageContainer = () =>
-      !disableRightImage && (
+      rightButtonImageSource && (
         <Image
           source={rightButtonImageSource}
           style={buttonImageStyle || styles.buttonImageStyle}

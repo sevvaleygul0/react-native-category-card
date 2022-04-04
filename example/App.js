@@ -1,6 +1,8 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Dimensions} from 'react-native';
 import CategoryCard from './lib/category-card/CategoryCard';
+
+const windowWidth = Dimensions.get('window').width;
 
 const App = () => {
   return (
@@ -8,9 +10,17 @@ const App = () => {
       style={{
         flex: 1,
         alignItems: 'center',
-        marginTop: 70,
+        paddingTop: 70,
+        backgroundColor: '#fffcff',
       }}>
-      <Text style={{fontSize: 26, fontWeight: 'bold'}}>
+      <Text
+        style={{
+          fontSize: 30,
+          fontWeight: 'bold',
+          color: '#7a0c7a',
+          width: windowWidth * 0.7,
+          textAlign: 'center',
+        }}>
         React Native Category Card
       </Text>
       <View style={{marginTop: 52, marginBottom: 16}}>

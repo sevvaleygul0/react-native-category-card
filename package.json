@@ -30,10 +30,14 @@
     "@types/react-test-renderer": "^17.0.1",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
-    "husky": "^4.2.5",
+    "husky": "^7.0.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "prettier-format": "^3.0.3",
+    "react-native-typescript-transformer": "^1.2.13"
   },
   "husky": {
     "hooks": {
@@ -53,5 +57,17 @@
     "react-native": ">= 0.55.x",
     "react-native-androw": "0.0.34",
     "react-native-linear-gradient": "^2.5.6"
+  },
+  "scripts": {
+    "build": "cd lib && tsc && cp ../package.json ../build/dist/ && Echo Build completed!",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "prettier": "cd lib && npx prettier --write . && git add .",
+    "prepare": "husky install",
+    "husky:setup": "npx husky-init && npm run husky:commitlint && npm run husky:prettier",
+    "husky:commitlint": "npx husky add .husky/commit-msg 'npx --no-install commitlint --edit'",
+    "husky:prettier": "npx husky add .husky/pre-commit 'npm run prettier'"
   }
 }
