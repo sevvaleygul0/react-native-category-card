@@ -11,7 +11,7 @@ const App = () => {
         flex: 1,
         alignItems: 'center',
         paddingTop: 70,
-        backgroundColor: '#fffcff',
+        backgroundColor: '#fcfafc',
       }}>
       <Text
         style={{
@@ -25,6 +25,7 @@ const App = () => {
       </Text>
       <View style={{marginTop: 52, marginBottom: 16}}>
         <CategoryCard
+          titleText="Fruit & Vegetables"
           titleColor="#4c8e9c"
           height={45}
           onPress={() => console.log('Fruits')}
@@ -35,6 +36,7 @@ const App = () => {
           titleText={'Meat & Poultry'}
           descriptionText={'Butcher'}
           count={1}
+          disableRightButton
           titleColor="#E8B730"
           descriptionColor="#edd695"
           onPress={() => console.log('Meat & Poultry')}
@@ -61,6 +63,7 @@ const App = () => {
         <CategoryCard
           titleText={'Pantry'}
           descriptionText="Fresh Food"
+          disableRightButton
           count={8}
           gradientColors={['#E5D1FA', '#C69CF4', '#A866EE']}
           imageSource={require('./lib/asset/star.png')}
@@ -70,6 +73,7 @@ const App = () => {
       <CategoryCard
         titleText={'Detergent'}
         count={2}
+        disableRightButton
         disableRightImage={true}
         gradientColors={['#D1FAD7', '#9CF4A7', '#66EE78']}
         imageSource={require('./lib/asset/star.png')}

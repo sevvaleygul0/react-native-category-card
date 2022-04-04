@@ -1,6 +1,6 @@
 {
   "name": "react-native-category-card",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "",
   "keywords": [
     "SevvalEygul",
@@ -14,6 +14,11 @@
     "ui-lib",
     "rn",
     "card",
+    "Card",
+    "list",
+    "List",
+    "list-card",
+    "ListCard",
     "category",
     "CategoryCard"
   ],
@@ -23,6 +28,8 @@
   "author": "Sevval Eygul <sevvalleygull@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.43",
@@ -33,11 +40,9 @@
     "husky": "^7.0.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
-    "typescript": "^4.6.3",
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
     "prettier-format": "^3.0.3",
-    "react-native-typescript-transformer": "^1.2.13"
+    "react-native-typescript-transformer": "^1.2.13",
+    "typescript": "^4.6.3"
   },
   "husky": {
     "hooks": {

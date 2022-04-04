@@ -1,4 +1,4 @@
-import {ImageStyle, StyleSheet, TextStyle, ViewStyle} from 'react-native';
+import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from "react-native";
 
 interface Style {
   gradient: ViewStyle;
@@ -19,7 +19,7 @@ export const _shadowStyle = (shadowColor): ViewStyle => ({
 });
 
 export const _titleTextStyle = (textColor: string): TextStyle => ({
-  fontWeight: 'bold',
+  fontWeight: "bold",
   fontSize: 15,
   color: textColor,
 });
@@ -49,9 +49,9 @@ export const _container = (
   paddingRight: 16,
   paddingTop: 12,
   paddingBottom: 12,
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'center',
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
 });
 
 export default StyleSheet.create<Style>({
@@ -61,18 +61,18 @@ export default StyleSheet.create<Style>({
     opacity: 0.5,
     marginRight: 20,
     borderRadius: 32,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   imageStyle: {
     width: 30,
     height: 30,
   },
   textContainer: {
-    marginRight: 'auto',
+    marginRight: "auto",
   },
   countContainerStyle: {
-    marginLeft: 'auto',
+    marginLeft: "auto",
     marginRight: 12,
   },
   buttonImageStyle: {

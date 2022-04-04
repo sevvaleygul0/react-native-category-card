@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
@@ -7,10 +7,10 @@ import {
   ViewStyle,
   ImageStyle,
   Dimensions,
-} from 'react-native';
-import Androw from 'react-native-androw';
-import LinearGradient from 'react-native-linear-gradient';
-import RNBounceable from '@freakycoder/react-native-bounceable';
+} from "react-native";
+import Androw from "react-native-androw";
+import LinearGradient from "react-native-linear-gradient";
+import RNBounceable from "@freakycoder/react-native-bounceable";
 
 import styles, {
   _shadowStyle,
@@ -18,8 +18,8 @@ import styles, {
   _descriptionTextStyle,
   _countTextStyle,
   _titleTextStyle,
-} from './CategoryCard.style';
-const windowWidth = Dimensions.get('window').width;
+} from "./CategoryCard.style";
+const windowWidth = Dimensions.get("window").width;
 
 type CustomViewStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
 type CustomImageStyleProp =
@@ -27,7 +27,7 @@ type CustomImageStyleProp =
   | Array<StyleProp<ImageStyle>>;
 
 export interface ISource {
-  source: string | {uri: string};
+  source: string | { uri: string };
 }
 
 interface IProps {
@@ -71,20 +71,20 @@ export default class CategoryCard extends React.Component<IProps, IState> {
       height,
       borderRadius = 16,
       titleText,
-      titleColor = '#9e9e9e',
+      titleColor = "#9e9e9e",
       imageStyle,
-      shadowColor = '#757575',
+      shadowColor = "#757575",
       shadowStyle,
       imageSource,
-      gradientColors = ['#9CF4DF', '#30C9E8', '#107C91'],
+      gradientColors = ["#9CF4DF", "#30C9E8", "#107C91"],
       descriptionText,
-      descriptionColor = '#B4B4B4',
-      backgroundColor = '#fff',
+      descriptionColor = "#B4B4B4",
+      backgroundColor = "#fff",
       buttonImageStyle,
       disableRightButton = false,
       customImageComponent,
       ImageComponent = Image,
-      rightButtonImageSource = require('../asset/next.png'),
+      rightButtonImageSource = require("../asset/next.png"),
       customCountTextComponent,
       customTitleTextComponent,
       customDescriptionComponent,
@@ -94,10 +94,11 @@ export default class CategoryCard extends React.Component<IProps, IState> {
     const renderLeftImageContainer = () =>
       imageSource && (
         <LinearGradient
-          start={{x: 0.0, y: 0.25}}
-          end={{x: 0.5, y: 1.0}}
+          start={{ x: 0.0, y: 0.25 }}
+          end={{ x: 0.5, y: 1.0 }}
           colors={gradientColors}
-          style={styles.gradient}>
+          style={styles.gradient}
+        >
           {customImageComponent || (
             <ImageComponent
               style={imageStyle || styles.imageStyle}
@@ -143,7 +144,8 @@ export default class CategoryCard extends React.Component<IProps, IState> {
       <RNBounceable onPress={onPress}>
         <Androw style={shadowStyle || _shadowStyle(shadowColor)}>
           <View
-            style={_container(height, width, borderRadius, backgroundColor)}>
+            style={_container(height, width, borderRadius, backgroundColor)}
+          >
             {renderLeftImageContainer()}
             {renderTextContainer()}
             {renderCountTextContainer()}
