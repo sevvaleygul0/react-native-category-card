@@ -28,7 +28,7 @@
   "author": "Sevval Eygul <sevvalleygull@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
+    "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^15.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^27.4.1",
@@ -38,7 +38,7 @@
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "husky": "^7.0.0",
-    "lint-staged": "^10.2.11",
+    "lint-staged": "^13.2.1",
     "prettier": "^2.0.5",
     "prettier-format": "^3.0.3",
     "react-native-typescript-transformer": "^1.2.13",
